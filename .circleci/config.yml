@@ -14,6 +14,7 @@ jobs:
 
     steps:
       - checkout
+        cd root/repo/Devops_Microservices/project-ml-microservice-kubernetes
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -24,7 +25,7 @@ jobs:
       - run:
             name: install dependencies
             command: |
-              cd /repo/Devops_Microservices/project-ml-microservice-kubernetes
+              cd root/repo/Devops_Microservices/project-ml-microservice-kubernetes
               python3 -m venv venv
               . venv/bin/activate
               make install
