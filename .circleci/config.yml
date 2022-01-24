@@ -9,10 +9,11 @@ jobs:
       # Use the same Docker base as the project
       - image: python:3.7.3-stretch
 
-    working_directory: ~/
+    working_directory: ~/repo
 
 
     steps:
+      cd repo
       - checkout
       # Download and cache dependencies
       - restore_cache:
